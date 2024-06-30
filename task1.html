@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuerySelector</title>
+</head>
+<body>
+    <div class="first">
+<a href="">Hello</a>
+    </div>
+    <div class="first">
+        <a href="" class="demo">kese</a>
+            </div>
+            <div class="first">
+                <a href="">Hai</a>
+                    </div>
+                    <div class="first">
+                        <a href="">aap</a>
+                            </div>
+    <div class="second">
+        <a href="">Hiii</a>
+    </div>
+    <script>
+        // var anchors = document.getElementsByTagName("a")
+
+        var anchors = document.querySelectorAll(".first a");
+
+        // var anchors = document.querySelectorAll("div .demo");
+        // var anchors = document.querySelectorAll("div :not(.demo)");
+
+        console.log(anchors)
+
+        document.addEventListener(
+            "contextmenu",
+            function (e) {
+                console.log(e)
+                e.preventDefault();
+            }
+        )
+        document.addEventListener(
+            "keydown",
+            function(e){
+                // console.log(e)
+                if(e.code == "KeyI" || "KeyC" || "Key12" && e.shiftKey == true && e.ctrlKey == true){
+                    e.preventDefault();
+                } 
+                // if(e.code == "F12") e.preventDefault();
+            }
+        )
+    </script>
+</body>
+</html>
